@@ -1,4 +1,4 @@
-var map=snarf(arguments[0]);
+var map=snarf(scriptArgs[0]);
 
 function TextNode(text){
 	this.value=text;
@@ -48,5 +48,5 @@ parseToTree(map);
 
 
 for(var i=0;i<lights.length;i++){
-	print(lights[i].origin+" "+lights[i].light+" 1.0 1.0 1.0 "+lights[i].style);
+	print(lights[i].origin+" "+lights[i].light+" 1.0 1.0 1.0 "+(lights[i].style||0));
 }
